@@ -1,75 +1,500 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Exporápida | Escuela de Bellas Artes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<header>
-    <nav class="navbar bg-body-tertiary">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar bg-body-tertiary">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="img/esfap-vmp.svg" alt="Bootstrap" width="auto" height="48">
-            </a>
+          <a class="navbar-brand" href="#">
+            <img
+              src="img/esfap-vmp.svg"
+              alt="Bootstrap"
+              width="auto"
+              height="48"
+            />
+          </a>
 
-            <button type="button" class="btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                </svg>
-                <span class="badge text-bg-primary">0</span>
-            </button>
-
+          <button
+            type="button"
+            class="btn"
+            data-bs-toggle="modal"
+            data-bs-target="#modalcart"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-cart"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+              />
+            </svg>
+            <span id="canCarrito" class="badge text-bg-primary">0</span>
+          </button>
         </div>
-    </nav>
-</header>
-<main>
-    <div class="container mt-3">
+      </nav>
+    </header>
+    <main>
+      <div class="container mt-3 mb-5">
         <h1 class="display-6">Catalogo de Obras de Arte</h1>
         <div class="row">
-            <div class="col-md-4">
-                <div class="card mt-3">
-                    <img src="img/boulevard-vista.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img
+                src="img/boulevard-vista.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h4 id="titulo-1">Boulevar Vista</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: Mario Mozombite</p>
+                <p>Medidas: 2.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-1">S/. 350.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(1)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mt-3">
-                    <img src="img/motocarrosenespera.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img
+                src="img/motocarrosenespera.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h4 id="titulo-2">Motocarros en Espera</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: José Sabogal</p>
+                <p>Medidas: 1.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-2">S/. 350.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(2)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mt-3">
-                    <img src="img/musa-en-taller-grafico.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img
+                src="img/musa-en-taller-grafico.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h4 id="titulo-3">Musa en Taller</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: Joaquín Marín</p>
+                <p>Medidas: 2.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-3">S/. 850.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(3)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
             </div>
-            <div class="col-md-4">
-                <div class="card mt-3">
-                    <img src="img/macchupicchu.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img src="img/macchupicchu.jpg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h4 id="titulo-4">Macchupicchu</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: Mario Pizango</p>
+                <p>Medidas: 2.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-4">S/. 550.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(4)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
             </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img
+                src="img/bajobelen.jpg"
+                alt="bajo-belen"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h4 id="titulo-5">Bajo Belén</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: José Sabogal</p>
+                <p>Medidas: 1.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-5">S/. 350.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(5)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img src="img/botes.jpg" alt="botes" class="card-img-top" />
+              <div class="card-body">
+                <h4 id="titulo-6">Botes</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: José Sabogal</p>
+                <p>Medidas: 1.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-6">S/. 250.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(6)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img src="img/botes.jpg" alt="botes" class="card-img-top" />
+              <div class="card-body">
+                <h4 id="titulo-7">Guacamayo</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: Sofia Lores</p>
+                <p>Medidas: 2.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-7">S/. 650.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(7)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img
+                src="img/casa-pinasco-vista.jpg"
+                alt="rio"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h4 id="titulo-8">Casa Pinasco</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: Manuel Noriega</p>
+                <p>Medidas: 2.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-8">S/. 450.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(8)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img
+                src="img/matriz-noche.jpg"
+                alt="matriz-noche"
+                class="card-img-top"
+              />
+              <div class="card-body">
+                <h4 id="titulo-9">Iglesia Matriz Noche</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: Luis Panduro</p>
+                <p>Medidas: 2.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-9">S/. 450.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(9)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img src="img/paisaje.jpg" alt="paisaje." class="card-img-top" />
+              <div class="card-body">
+                <h4 id="titulo-10">Paisaje</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: Sofia Lores</p>
+                <p>Medidas: 2.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-10">S/. 450.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(10)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img src="img/sacarita.jpg" alt="sacarita" class="card-img-top" />
+              <div class="card-body">
+                <h4 id="titulo-11">Sacarita</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: Renato Linderos</p>
+                <p>Medidas: 2.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-11">S/. 650.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(11)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card mt-3">
+              <img src="img/tucunare.jpg" alt="tucunare" class="card-img-top" />
+              <div class="card-body">
+                <h4 id="titulo-12">Tucunare</h4>
+                <p>Óleo sobre lienzo</p>
+                <p>Artista: Maria Mendieta</p>
+                <p>Medidas: 2.5 x 1.5 m</p>
+                <span
+                  >Precio
+                  <p id="precio-12">S/. 450.00</p></span
+                >
+              </div>
+              <div
+                class="card-footer text-center pointer bg-primary text-white"
+                role="button"
+                onclick="addcajaCompra(12)"
+              >
+                <p>Agregar al carrito</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</main>
+      </div>
+    </main>
+    <!--Footer-->
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="bi bi-facebook"></i>
+          </a>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-        crossorigin="anonymous"></script>
-</body>
+          <!-- Twitter -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="bi bi-twitter"></i>
+          </a>
+
+          <!-- Google -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="bi bi-google"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="bi bi-instagram"></i
+          ></a>
+
+          <!-- Linkedin -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="bi bi-linkedin"></i
+          ></a>
+
+          <!-- Github -->
+          <a
+            class="btn btn-outline-light btn-floating m-1"
+            href="#!"
+            role="button"
+            ><i class="bi bi-github"></i
+          ></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2023 Copyright:
+        <a class="text-white" href="https://bellasartesiquitos.com/"
+          >bellasartesiquitos.com</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!--svg-->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+        />
+      </symbol>
+    </svg>
+    <!--Modal cart-->
+    <div
+      class="modal fade"
+      id="modalcart"
+      tabindex="-1"
+      aria-labelledby="modalcartLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalcartLabel">Carrito</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Obra</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody id="tbcompras"></tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Pagar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Modal alert-->
+    <div class="modal" id="modalalert" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div
+          class="alert alert-success d-flex align-items-center col-12"
+          role="alert"
+        >
+          <strong>
+            <svg
+              class="bi flex-shrink-0 me-2"
+              width="24"
+              height="24"
+              role="img"
+              aria-label="Success:"
+            >
+              <use xlink:href="#check-circle-fill" /></svg
+          ></strong>
+          Se agregó al carrito
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
